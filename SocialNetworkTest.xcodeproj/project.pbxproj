@@ -13,6 +13,7 @@
 		089CEBE723ABE63400DEAA90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBE523ABE63400DEAA90 /* Main.storyboard */; };
 		089CEBE923ABE63500DEAA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBE823ABE63500DEAA90 /* Assets.xcassets */; };
 		089CEBEC23ABE63500DEAA90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBEA23ABE63500DEAA90 /* LaunchScreen.storyboard */; };
+		089CEBF423ABE7D300DEAA90 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBF323ABE7D300DEAA90 /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		089CEBE823ABE63500DEAA90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		089CEBEB23ABE63500DEAA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		089CEBED23ABE63500DEAA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		089CEBF323ABE7D300DEAA90 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				089CEBE323ABE63400DEAA90 /* ViewController.swift */,
 				089CEBE523ABE63400DEAA90 /* Main.storyboard */,
 				089CEBE823ABE63500DEAA90 /* Assets.xcassets */,
+				089CEBF323ABE7D300DEAA90 /* data.json */,
 				089CEBEA23ABE63500DEAA90 /* LaunchScreen.storyboard */,
 				089CEBED23ABE63500DEAA90 /* Info.plist */,
 			);
@@ -128,6 +131,7 @@
 				089CEBEC23ABE63500DEAA90 /* LaunchScreen.storyboard in Resources */,
 				089CEBE923ABE63500DEAA90 /* Assets.xcassets in Resources */,
 				089CEBE723ABE63400DEAA90 /* Main.storyboard in Resources */,
+				089CEBF423ABE7D300DEAA90 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
