@@ -15,6 +15,7 @@
 		089CEBEC23ABE63500DEAA90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBEA23ABE63500DEAA90 /* LaunchScreen.storyboard */; };
 		089CEBF423ABE7D300DEAA90 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 089CEBF323ABE7D300DEAA90 /* data.json */; };
 		089CEBF823ABEB7400DEAA90 /* MemberDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CEBF723ABEB7400DEAA90 /* MemberDataModel.swift */; };
+		089CEBFA23ABF14700DEAA90 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CEBF923ABF14700DEAA90 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		089CEBED23ABE63500DEAA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089CEBF323ABE7D300DEAA90 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		089CEBF723ABEB7400DEAA90 /* MemberDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDataModel.swift; sourceTree = "<group>"; };
+		089CEBF923ABF14700DEAA90 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				089CEBDF23ABE63400DEAA90 /* AppDelegate.swift */,
 				089CEBF523ABEA2D00DEAA90 /* Data Model */,
 				089CEBF623ABEA5000DEAA90 /* Social Network */,
+				089CEBED23ABE63500DEAA90 /* Info.plist */,
 			);
 			path = SocialNetworkTest;
 			sourceTree = "<group>";
@@ -70,6 +73,7 @@
 		089CEBF523ABEA2D00DEAA90 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				089CEBF923ABF14700DEAA90 /* DataManager.swift */,
 				089CEBF723ABEB7400DEAA90 /* MemberDataModel.swift */,
 				089CEBF323ABE7D300DEAA90 /* data.json */,
 			);
@@ -84,7 +88,6 @@
 				089CEBE523ABE63400DEAA90 /* Main.storyboard */,
 				089CEBE823ABE63500DEAA90 /* Assets.xcassets */,
 				089CEBEA23ABE63500DEAA90 /* LaunchScreen.storyboard */,
-				089CEBED23ABE63500DEAA90 /* Info.plist */,
 			);
 			path = "Social Network";
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				089CEBE423ABE63400DEAA90 /* ViewController.swift in Sources */,
+				089CEBFA23ABF14700DEAA90 /* DataManager.swift in Sources */,
 				089CEBE023ABE63400DEAA90 /* AppDelegate.swift in Sources */,
 				089CEBE223ABE63400DEAA90 /* SceneDelegate.swift in Sources */,
 				089CEBF823ABEB7400DEAA90 /* MemberDataModel.swift in Sources */,

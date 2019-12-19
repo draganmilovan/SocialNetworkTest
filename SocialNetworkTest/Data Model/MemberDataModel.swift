@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct MemberDataModel {
+struct MemberDataModel: Codable {
     
     let id: Int
     let firstName: String
