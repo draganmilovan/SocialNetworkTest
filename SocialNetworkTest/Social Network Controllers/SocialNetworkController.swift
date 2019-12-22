@@ -9,6 +9,12 @@
 import UIKit
 
 class SocialNetworkController: UIViewController {
+    
+    var dataManager: DataManager? {
+        didSet {
+            print(self.dataManager!.members)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,6 +16,6 @@ struct MemberDataModel: Codable {
     let surname: String?
     let age: Int?
     let gender: String?
-    var friends: [String] = []
+    var friends: [Int] = []
     
 }
