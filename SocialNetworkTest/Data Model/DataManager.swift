@@ -72,13 +72,46 @@ extension DataManager {
             }
         }
         
+        populateMembersFriendsFriends(for: member)
+        
     }
     
     //
     // Method for populating membersFriendsFriends Array
     //
-    func populateMembersFriendsFriends() {
+    func populateMembersFriendsFriends(for member: MemberDataModel) {
         
+        var all: [Int] = []
+        var ff: [Int] = []
+        
+        let _ = membersFriends.compactMap {
+            all.append(contentsOf: $0.friends)
+        }
+        
+        let _ = all.compactMap {
+            if ($0 != member.id), (!ff.contains($0)) {
+                ff.append($0)
+            }
+        }
+        
+        let _ = member.friends.compactMap {
+            for (index, element) in ff.enumerated() {
+                if element == $0 {
+                    ff.remove(at: index)
+                }
+            }
+        }
+        
+        let _ = ff.compactMap {
+            let id = $0
+            let _ = members.compactMap {
+                if $0.id == id {
+                    membersFriendsFriends.append($0)
+                }
+            }
+        }
+        
+        populateMembersSuggestedFriends()
         
     }
     
@@ -86,8 +119,13 @@ extension DataManager {
     // Method for populating membersSuggestedFriends Array
     //
     func populateMembersSuggestedFriends() {
-        
-        
+        membersFriends.compactMap {
+            print("Friend: \($0.id)")
+        }
+        membersFriendsFriends.compactMap {
+            print("Friends firend: \($0.id)")
+
+        }
     }
     
 }
