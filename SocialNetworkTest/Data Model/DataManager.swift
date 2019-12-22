@@ -16,11 +16,7 @@ final class DataManager {
             populateMembersFriends(for: self.members[4])
         }
     }
-    var membersFriends: [MemberDataModel] = [] {
-        didSet {
-            print(self.membersFriends)
-        }
-    }
+    var membersFriends: [MemberDataModel] = []
     var membersFriendsFriends: [MemberDataModel] = []
     var membersSuggestedFriends: [MemberDataModel] = []
     
@@ -67,10 +63,12 @@ extension DataManager {
     //
     func populateMembersFriends(for member: MemberDataModel) {
         
-        let _ = member.friends.map {
+        let _ = member.friends.compactMap {
             let id = $0
-            membersFriends = members.filter {
-                $0.id == id
+            let _ = members.compactMap {
+                if $0.id == id {
+                    membersFriends.append($0)
+                }
             }
         }
         
