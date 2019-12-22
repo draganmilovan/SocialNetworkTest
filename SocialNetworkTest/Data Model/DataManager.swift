@@ -67,8 +67,7 @@ extension DataManager {
     //
     func populateMembersFriends(for member: MemberDataModel) {
         
-        let friendsIDs: [Int] = member.friends
-        let _ = friendsIDs.map {
+        let _ = member.friends.map {
             let id = $0
             membersFriends = members.filter {
                 $0.id == id
