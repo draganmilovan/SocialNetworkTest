@@ -11,7 +11,18 @@ import Foundation
 
 final class DataManager {
     
-    var members: [MemberDataModel] = []
+    var members: [MemberDataModel] = [] {
+        didSet {
+            populateMembersFriends(for: self.members[4])
+        }
+    }
+    var membersFriends: [MemberDataModel] = [] {
+        didSet {
+            print(self.membersFriends)
+        }
+    }
+    var membersFriendsFriends: [MemberDataModel] = []
+    var membersSuggestedFriends: [MemberDataModel] = []
     
     
     init() {
@@ -22,7 +33,7 @@ final class DataManager {
 
 
 
-// MARK:- Items Data Manager private methods
+// MARK:- Data Manager private methods
 fileprivate extension DataManager {
     
     //
@@ -42,8 +53,44 @@ fileprivate extension DataManager {
         catch {
             print("JSON error")
         }
+    }
+    
+}
+
+
+
+// MARK:- Data Manager member's friends arays populating methods
+extension DataManager {
+    
+    //
+    // Method for populating membersFriends Array
+    //
+    func populateMembersFriends(for member: MemberDataModel) {
+        
+        let friendsIDs: [Int] = member.friends
+        let _ = friendsIDs.map {
+            let id = $0
+            membersFriends = members.filter {
+                $0.id == id
+            }
+        }
         
     }
     
+    //
+    // Method for populating membersFriendsFriends Array
+    //
+    func populateMembersFriendsFriends() {
+        
+        
+    }
+    
+    //
+    // Method for populating membersSuggestedFriends Array
+    //
+    func populateMembersSuggestedFriends() {
+        
+        
+    }
     
 }

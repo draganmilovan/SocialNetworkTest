@@ -12,7 +12,7 @@ class SocialNetworkController: UIViewController {
     
     var dataManager: DataManager? {
         didSet {
-            print(self.dataManager!.members)
+           // print(self.dataManager!.members)
         }
     }
 
