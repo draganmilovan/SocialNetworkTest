@@ -111,21 +111,61 @@ extension DataManager {
             }
         }
         
-        populateMembersSuggestedFriends()
+        populateMembersSuggestedFriends(for: member)
         
     }
     
     //
     // Method for populating membersSuggestedFriends Array
     //
-    func populateMembersSuggestedFriends() {
-        membersFriends.compactMap {
-            print("Friend: \($0.id)")
+    func populateMembersSuggestedFriends(for member: MemberDataModel) {
+        
+        var all: [Int] = []
+        var ff: [Int] = []
+        var sf: [Int] = []
+        
+        let _ = membersFriends.compactMap {
+            all.append(contentsOf: $0.friends)
         }
-        membersFriendsFriends.compactMap {
-            print("Friends firend: \($0.id)")
-
+        
+        let _ = all.compactMap {
+            if ($0 != member.id) {
+                ff.append($0)
+            }
         }
+        
+        let _ = member.friends.compactMap {
+            for (index, element) in ff.enumerated() {
+                if element == $0 {
+                    ff.remove(at: index)
+                }
+            }
+        }
+        
+        sf = ff.duplicates()
+        
+        let _ = sf.compactMap {
+            let id = $0
+            let _ = members.compactMap {
+                if $0.id == id {
+                    membersSuggestedFriends.append($0)
+                }
+            }
+        }
+        
     }
     
+    
+}
+
+
+
+
+extension Array where Element: Hashable {
+    func duplicates() -> Array {
+        let groups = Dictionary(grouping: self, by: {$0})
+        let duplicateGroups = groups.filter {$1.count > 1}
+        let duplicates = Array(duplicateGroups.keys)
+        return duplicates
+    }
 }
