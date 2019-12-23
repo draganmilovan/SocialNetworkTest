@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		083E5C2F23B01AF200FEF847 /* MemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083E5C2E23B01AF200FEF847 /* MemberTableViewCell.swift */; };
+		0884099F23B0CBB9009FF428 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0884099E23B0CBB8009FF428 /* FriendsController.swift */; };
 		089CEBE023ABE63400DEAA90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CEBDF23ABE63400DEAA90 /* AppDelegate.swift */; };
 		089CEBE223ABE63400DEAA90 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CEBE123ABE63400DEAA90 /* SceneDelegate.swift */; };
 		089CEBE423ABE63400DEAA90 /* SocialNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CEBE323ABE63400DEAA90 /* SocialNetworkController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		083E5C2E23B01AF200FEF847 /* MemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberTableViewCell.swift; sourceTree = "<group>"; };
+		0884099E23B0CBB8009FF428 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		089CEBDC23ABE63400DEAA90 /* SocialNetworkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089CEBDF23ABE63400DEAA90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		089CEBE123ABE63400DEAA90 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				089CEBE323ABE63400DEAA90 /* SocialNetworkController.swift */,
 				083E5C2E23B01AF200FEF847 /* MemberTableViewCell.swift */,
+				0884099E23B0CBB8009FF428 /* FriendsController.swift */,
 				089CEBE523ABE63400DEAA90 /* Main.storyboard */,
 				089CEBE823ABE63500DEAA90 /* Assets.xcassets */,
 				089CEBEA23ABE63500DEAA90 /* LaunchScreen.storyboard */,
@@ -172,6 +175,7 @@
 				089CEBFA23ABF14700DEAA90 /* DataManager.swift in Sources */,
 				089CEBE023ABE63400DEAA90 /* AppDelegate.swift in Sources */,
 				089CEBE223ABE63400DEAA90 /* SceneDelegate.swift in Sources */,
+				0884099F23B0CBB9009FF428 /* FriendsController.swift in Sources */,
 				089CEBF823ABEB7400DEAA90 /* MemberDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

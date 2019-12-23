@@ -70,6 +70,21 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="85.714285714285708"/>
         </scene>
+        <!--Friends Controller-->
+        <scene sceneID="vHr-Cm-hWN">
+            <objects>
+                <viewController id="uat-bs-mCc" customClass="FriendsController" customModule="SocialNetworkTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="noD-9H-hzm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vkr-L9-uSU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyS-23-Vf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="86"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0QK-oc-kn9">
             <objects>
