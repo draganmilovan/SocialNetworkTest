@@ -11,11 +11,8 @@ import Foundation
 
 final class DataManager {
     
-    var members: [MemberDataModel] = [] {
-        didSet {
-            //populateMembersFriends(for: self.members[4])
-        }
-    }
+    var members: [MemberDataModel] = []
+
     var membersFriends: [MemberDataModel] = []
     var membersFriendsFriends: [MemberDataModel] = []
     var membersSuggestedFriends: [MemberDataModel] = []
@@ -106,7 +103,6 @@ extension DataManager {
         
         membersFriendsFriends = populateMembersArray(from: ff)
 
-        print(membersFriendsFriends)
         populateMembersSuggestedFriends(for: member)
         
     }
@@ -131,7 +127,6 @@ extension DataManager {
         
         membersSuggestedFriends = populateMembersArray(from: sf)
 
-        print(membersSuggestedFriends)
     }
     
     
