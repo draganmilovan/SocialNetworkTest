@@ -50,6 +50,16 @@ fileprivate extension DataManager {
             print("JSON error")
         }
     }
+        
+    //
+    // Method remove data from all member's friends arrays
+    //
+    func removeAllFriendsData() {
+        
+        membersFriends.removeAll()
+        membersFriendsFriends.removeAll()
+        membersSuggestedFriends.removeAll()
+    }
     
 }
 
@@ -63,9 +73,7 @@ extension DataManager {
     //
     func populateMembersFriends(for member: MemberDataModel) {
         
-        membersFriends.removeAll()
-        membersFriendsFriends.removeAll()
-        membersSuggestedFriends.removeAll()
+        removeAllFriendsData()
         
         let _ = member.friends.compactMap {
             let id = $0
@@ -83,7 +91,7 @@ extension DataManager {
     //
     // Method for populating membersFriendsFriends Array
     //
-    func populateMembersFriendsFriends(for member: MemberDataModel) {
+    fileprivate func populateMembersFriendsFriends(for member: MemberDataModel) {
         
         let all: [Int] = { findAllFriendsFriendsIDs(for: member) }()
         var ff: [Int] = []
@@ -106,7 +114,7 @@ extension DataManager {
     //
     // Method for populating membersSuggestedFriends Array
     //
-    func populateMembersSuggestedFriends(for member: MemberDataModel) {
+    fileprivate func populateMembersSuggestedFriends(for member: MemberDataModel) {
         
         let all: [Int] = { findAllFriendsFriendsIDs(for: member) }()
         var ff: [Int] = []
