@@ -22,9 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         configureDataManager()
         
-        if let vc = window?.rootViewController as? SocialNetworkController {
-            vc.dataManager = dataManager
+        guard let nc = window?.rootViewController as? UINavigationController else {
+            fatalError("Missing Initial Controller!")
         }
+        guard let vc = nc.topViewController as? SocialNetworkController else {
+            fatalError("Missing SocialNetworkController!")
+        }
+        
+        vc.dataManager = dataManager
         
     }
 
