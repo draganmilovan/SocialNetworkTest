@@ -30,7 +30,7 @@ class SocialNetworkController: UIViewController {
 
 
 
-//Mark:- Table View Data Source Protocol Methods
+//MARK:- Table View Data Source Protocol Methods
 extension SocialNetworkController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -57,15 +57,21 @@ extension SocialNetworkController: UITableViewDataSource {
 
 
 
-//Mark:- Table View Delegate Methods
+//MARK:- Table View Delegate Methods
 extension SocialNetworkController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let dataManager = dataManager else {
-//            fatalError("Missing Data Manager!")
-//        }
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let dataManager = dataManager else {
+            fatalError("Missing Data Manager!")
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let fc = storyboard.instantiateViewController(withIdentifier: "FriendsController") as! FriendsController
+        let fc = storyboard.instantiateViewController(withIdentifier: "FriendsController") as! FriendsController
+        dataManager.populateMembersFriends(for: dataManager.members[indexPath.row])
         
+        fc.dataManager = dataManager
+        
+        show(fc, sender: self)
         
     }
     

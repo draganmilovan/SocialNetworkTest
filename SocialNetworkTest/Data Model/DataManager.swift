@@ -63,6 +63,10 @@ extension DataManager {
     //
     func populateMembersFriends(for member: MemberDataModel) {
         
+        membersFriends.removeAll()
+        membersFriendsFriends.removeAll()
+        membersSuggestedFriends.removeAll()
+        
         let _ = member.friends.compactMap {
             let id = $0
             let _ = members.compactMap {
