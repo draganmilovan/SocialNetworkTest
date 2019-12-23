@@ -93,11 +93,11 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nyw-Qp-xTP">
                                         <rect key="frame" x="0.0" y="66" width="414" height="186.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" id="KEZ-HS-hFc">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KEZ-HS-hFc">
                                             <size key="itemSize" width="153" height="103"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                            <inset key="sectionInset" minX="20" minY="8" maxX="8" maxY="8"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
                                         <connections>
@@ -132,11 +132,11 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bZJ-Kj-7IW">
                                         <rect key="frame" x="0.0" y="66" width="414" height="187"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" id="bG0-Nu-o2y">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bG0-Nu-o2y">
                                             <size key="itemSize" width="153" height="103"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                            <inset key="sectionInset" minX="20" minY="8" maxX="8" maxY="8"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
                                         <connections>
@@ -171,11 +171,11 @@
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="014-8c-0bg">
                                         <rect key="frame" x="0.0" y="60" width="414" height="192.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" id="GSU-mQ-oaf">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GSU-mQ-oaf">
                                             <size key="itemSize" width="153" height="103"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                            <inset key="sectionInset" minX="20" minY="8" maxX="8" maxY="8"/>
                                         </collectionViewFlowLayout>
                                         <cells/>
                                         <connections>
