@@ -22,7 +22,7 @@ class SocialNetworkController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
@@ -65,11 +65,12 @@ extension SocialNetworkController: UITableViewDelegate {
             fatalError("Missing Data Manager!")
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //let fc = storyboard.instantiateViewController(withIdentifier: "FriendsController") as! FriendsController
         let fc = storyboard.instantiateViewController(withIdentifier: "FriendsController") as! FriendsController
+        
         dataManager.populateMembersFriends(for: dataManager.members[indexPath.row])
         
         fc.dataManager = dataManager
+        fc.title = dataManager.members[indexPath.row].firstName + "'s"
         
         show(fc, sender: self)
         
