@@ -70,7 +70,7 @@ private extension FriendsController {
         if !dataManager.membersFriendsFriends.isEmpty {
             friendsFriendsLabel.text = "Friend's Friends"
         } else {
-            friendsFriendsLabel.text = "Friend's Friends"
+            friendsFriendsLabel.text = "Connected to All Friend's Friends"
         }
         
         if !dataManager.membersSuggestedFriends.isEmpty {
