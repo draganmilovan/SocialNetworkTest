@@ -33,9 +33,55 @@ class FriendsController: UIViewController {
         super.viewDidLoad()
         
         registerCollectionViewsCell()
+        cleanLabels()
+        populateLabels()
     }
 
 }
+
+
+
+//MARK: - Friends Controller private methods
+private extension FriendsController {
+    
+    //
+    // Method clean text from all Labels
+    //
+    func cleanLabels() {
+        friendsLabel.text = nil
+        friendsFriendsLabel.text = nil
+        suggestedFriendsLabel.text = nil
+    }
+    
+    //
+    // Method populate labels with text
+    //
+    func populateLabels() {
+        guard let dataManager = dataManager else {
+            fatalError("Missing Data Manager!")
+        }
+    
+        if !dataManager.membersFriends.isEmpty {
+            friendsLabel.text = "Friends"
+        } else {
+            friendsLabel.text = "No Friends Yet :("
+        }
+        
+        if !dataManager.membersFriendsFriends.isEmpty {
+            friendsFriendsLabel.text = "Friend's Friends"
+        } else {
+            friendsFriendsLabel.text = "Friend's Friends"
+        }
+        
+        if !dataManager.membersSuggestedFriends.isEmpty {
+            suggestedFriendsLabel.text = "Suggested Friends"
+        } else {
+            suggestedFriendsLabel.text = "No Suggested Friends :("
+        }
+    }
+    
+}
+
 
 
 
