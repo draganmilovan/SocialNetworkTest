@@ -13,7 +13,7 @@ final class DataManager {
     
     var members: [MemberDataModel] = [] {
         didSet {
-            populateMembersFriends(for: self.members[4])
+            //populateMembersFriends(for: self.members[4])
         }
     }
     var membersFriends: [MemberDataModel] = []
@@ -92,8 +92,7 @@ extension DataManager {
         
         ff = removeExistingFriends(for: member, from: ff)
         
-        let mmbrs = populateMembersArray(from: ff)
-        membersFriendsFriends = mmbrs
+        membersFriendsFriends = populateMembersArray(from: ff)
 
         print(membersFriendsFriends)
         populateMembersSuggestedFriends(for: member)
@@ -118,8 +117,7 @@ extension DataManager {
         ff = removeExistingFriends(for: member, from: ff)
         sf = ff.duplicates()
         
-        let mmbrs = populateMembersArray(from: sf)
-        membersSuggestedFriends = mmbrs
+        membersSuggestedFriends = populateMembersArray(from: sf)
 
         print(membersSuggestedFriends)
     }
