@@ -24,7 +24,10 @@ class SocialNetworkController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationReceived(notification:)),
+                                               name: Notification.Name("DataUpdated"),
+                                               object: nil)
     }
 
 

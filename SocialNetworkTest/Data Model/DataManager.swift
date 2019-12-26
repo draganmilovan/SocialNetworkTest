@@ -11,7 +11,11 @@ import Foundation
 
 final class DataManager {
     
-    var members: [MemberDataModel] = []
+    var members: [MemberDataModel] = [] {
+        didSet {
+            postNotification()
+        }
+    }
 
     var membersFriends: [MemberDataModel] = []
     var membersFriendsFriends: [MemberDataModel] = []
@@ -34,18 +38,29 @@ fileprivate extension DataManager {
     //
     func populateMembers() {
         
-        guard let url = Bundle.main.path(forResource: "data", ofType: "json") else {
-            fatalError("Missing data JSON!")
-        }
-        
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: url))
+        DispatchQueue.global(qos: .background).async {
+            [unowned self ] in
+            
+            var mmbrs: [MemberDataModel] = []
+            
+            guard let url = Bundle.main.path(forResource: "data", ofType: "json") else {
+                fatalError("Missing data JSON!")
+            }
+            
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: url))
 
-            members = try JSONDecoder().decode([MemberDataModel].self, from: data)
+                mmbrs = try JSONDecoder().decode([MemberDataModel].self, from: data)
+            }
+            catch {
+                print("JSON error")
+            }
+            
+            DispatchQueue.main.async {
+                self.members.append(contentsOf: mmbrs)
+            }
         }
-        catch {
-            print("JSON error")
-        }
+
     }
         
     //
@@ -56,6 +71,14 @@ fileprivate extension DataManager {
         membersFriends.removeAll()
         membersFriendsFriends.removeAll()
         membersSuggestedFriends.removeAll()
+    }
+    
+    //
+    // Method for posting Notification after parsing JSON
+    //
+    func postNotification() {
+        NotificationCenter.default.post(name: Notification.Name("DataUpdated"),
+                                        object: nil)
     }
     
 }
