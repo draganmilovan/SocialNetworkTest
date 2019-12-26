@@ -72,14 +72,7 @@ extension DataManager {
         
         removeAllFriendsData()
         
-        let _ = member.friends.compactMap {
-            let id = $0
-            let _ = members.compactMap {
-                if $0.id == id {
-                    membersFriends.append($0)
-                }
-            }
-        }
+        membersFriends = populateMembersArray(from: member.friends)
         
         populateMembersFriendsFriends(for: member)
         
@@ -93,8 +86,9 @@ extension DataManager {
         let all: [Int] = { findAllFriendsFriendsIDs(for: member) }()
         var ff: [Int] = []
         
+        // Removing duplicates
         let _ = all.compactMap {
-            if ($0 != member.id), (!ff.contains($0)) {
+            if !ff.contains($0) {
                 ff.append($0)
             }
         }
@@ -112,15 +106,8 @@ extension DataManager {
     //
     fileprivate func populateMembersSuggestedFriends(for member: MemberDataModel) {
         
-        let all: [Int] = { findAllFriendsFriendsIDs(for: member) }()
-        var ff: [Int] = []
+        var ff: [Int] = { findAllFriendsFriendsIDs(for: member) }()
         var sf: [Int] = []
-        
-        let _ = all.compactMap {
-            if ($0 != member.id) {
-                ff.append($0)
-            }
-        }
         
         ff = removeExistingFriends(for: member, from: ff)
         sf = ff.duplicates()
@@ -135,10 +122,17 @@ extension DataManager {
     //
     fileprivate func findAllFriendsFriendsIDs(for member: MemberDataModel) -> [Int] {
         
+        var allPlusMemeber: [Int] = []
         var all: [Int] = []
         
         let _ = membersFriends.compactMap {
-            all.append(contentsOf: $0.friends)
+            allPlusMemeber.append(contentsOf: $0.friends)
+        }
+        
+        let _ = allPlusMemeber.compactMap {
+            if ($0 != member.id) {
+                all.append($0)
+            }
         }
         
         return all
