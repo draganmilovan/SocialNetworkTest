@@ -14,11 +14,13 @@ class SocialNetworkController: UIViewController {
         didSet {
             if !self.isViewLoaded { return }
             
-            membersTableView.reloadData()
+            updateUI()
         }
     }
 
     @IBOutlet private weak var membersTableView: UITableView!
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +76,31 @@ extension SocialNetworkController: UITableViewDelegate {
         
         show(fc, sender: self)
         
+    }
+    
+}
+
+
+
+//MARK:- Social Network Controller private methods
+private extension SocialNetworkController {
+    
+    //
+    // Method for handling received Notification
+    //
+    @objc func notificationReceived(notification: NSNotification){
+        
+        updateUI()
+    }
+    
+    
+    //
+    // Method for updating UI
+    //
+    func updateUI() {
+        
+        activityIndicator.stopAnimating()
+        membersTableView.reloadData()
     }
     
 }

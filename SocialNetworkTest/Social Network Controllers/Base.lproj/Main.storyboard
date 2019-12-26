@@ -51,6 +51,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3Z6-ok-5Tu"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="buF-vW-vka">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -63,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Members" id="T0D-JM-tGX"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="buF-vW-vka" id="toR-qM-VGH"/>
                         <outlet property="membersTableView" destination="dqy-Hj-YEf" id="XjJ-im-OfJ"/>
                     </connections>
                 </viewController>
